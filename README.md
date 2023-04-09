@@ -11,10 +11,6 @@
   - [x] latest
   - [x] search
   - [x] detail
-- [ ] hdhentai
-  - [ ] search
-  - [ ] latest
-  - [ ] detail
 
 </details>
 
@@ -29,6 +25,12 @@
   - [x] latest
   - [x] search
   - [x] detail
+- [ ] hdhentai
+  - [ ] search
+  - [x] latest
+  - [x] detail
+  - [x] series list
+  - [x] detail series
 
 </details>
 
