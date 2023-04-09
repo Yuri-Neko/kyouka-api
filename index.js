@@ -34,12 +34,13 @@ class kyouka_api {
     }
   }
   
- async otakudetail(url) {
+ async otakudownload(id) {
     try {
-      const response = await axios.get(`${this.otakuDesuBaseURL}/detail?apikey=${this.apiKey}&url=${url}`);
+      const episodeUrl = id.replace('https://otakudesu.lol/episode/', '');
+      const response = await axios.get(`${this.baseURL}/downloadv2?apikey=${this.apiKey}&id=${episodeUrl}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to get anime details: ${error.message}`);
+      throw new Error(`Failed to get episode download URL: ${error.message}`);
     }
   }
   
