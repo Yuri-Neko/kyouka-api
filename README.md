@@ -47,7 +47,7 @@ npm install github:Yuri-Neko/kyouka-api
 
 ### Notice.
 
-Package name changed to `@kyouka-api`
+Package name changed to `kyouka-api`
 
 ## Example use CJS
 ```js
@@ -59,7 +59,7 @@ const api = new Client(apiKey);
 ```
 ## Example use ESM
 ```js
-import { Client } from '@kyouka-api';
+import { Client } from 'kyouka-api';
 
 const apiKey = 'YOUR_API_KEY';
 const api = new Client(apiKey);
