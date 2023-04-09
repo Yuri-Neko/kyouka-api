@@ -146,6 +146,45 @@ api.igodesulatest()
   });
 ```
 
+#### HdHentai
+
+```js
+const series = 'https://hdhentai.com/serie/15-bishoujo-hyouryuuki/'
+const url = 'https://hdhentai.com/hentai/15-bishoujo-hyouryuuki-episode-2/'
+
+        
+api.hdhentaiseriesdetail(series)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+api.hdhentaidetail(url)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+api.hdhentaiseries()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+api.hdhentailatest()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
 ### Note.
 
 resgister apikey https://web.api-kyouka.my.id/
