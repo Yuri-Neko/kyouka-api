@@ -72,6 +72,8 @@ const api = new OtakudesuAPI(apiKey);
 const query = 'One Piece';
 const url = 'https://otakudesu.lol/anime/tonikaku-ni-kawaii-s2-sub-indo/',
 const url_eps = 'https://otakudesu.lol/episode/tk-s2-episode-1-sub-indo/',
+      
+      
 api.otakusearch(query)
   .then((data) => {
     console.log(data);
