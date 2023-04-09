@@ -69,9 +69,9 @@ const api = new OtakudesuAPI(apiKey);
 #### Otakudesu.
 
 ```js
-const query = 'One Piece';
-const url = 'https://otakudesu.lol/anime/tonikaku-ni-kawaii-s2-sub-indo/',
-const url_eps = 'https://otakudesu.lol/episode/tk-s2-episode-1-sub-indo/',
+const query = 'One Piece'
+const url = 'https://otakudesu.lol/anime/tonikaku-ni-kawaii-s2-sub-indo/'
+const episode = 'https://otakudesu.lol/episode/tk-s2-episode-1-sub-indo/'
       
       
 api.otakusearch(query)
@@ -90,7 +90,7 @@ api.otakudetail(url)
     console.error(error);
   });
 
-api.otakudownload(url_eps)
+api.otakudownload(episode)
   .then((data) => {
     console.log(data);
   })
