@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-class kyouka_api {
+class Client {
   constructor(apiKey) {
     this.apiKey = apiKey;
     this.otakuDesuBaseURL = 'https://web.api-kyouka.my.id/api/anime/otakudesu';
@@ -54,4 +54,4 @@ class kyouka_api {
   }
 }
 
-module.exports = kyouka_api;
+module.exports = Client;
