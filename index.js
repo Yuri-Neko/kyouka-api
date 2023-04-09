@@ -26,15 +26,6 @@ class Client {
     }
   }
 
-  async otakudownload(id) {
-    try {
-      const response = await axios.get(`${this.otakuDesuBaseURL}/downloadv2?apikey=${this.apiKey}&id=${id}`);
-      return response.data;
-    } catch (error) {
-      throw new Error(`Failed to download anime: ${error.message}`);
-    }
-  }
-  
  async otakudownload(id) {
     try {
       const episodeUrl = id.replace('https://otakudesu.lol/episode/', '');
@@ -59,7 +50,7 @@ class Client {
       const response = await axios.get(`${this.igoDesuBaseURL}/search?apikey=${this.apiKey}&query=${query}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to search anime: ${error.message}`);
+      throw new Error(`Failed to search bokep: ${error.message}`);
     }
   }
   
@@ -68,7 +59,7 @@ class Client {
       const response = await axios.get(`${this.igoDesuBaseURL}/detail?apikey=${this.apiKey}&url=${url}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to search anime: ${error.message}`);
+      throw new Error(`Failed to detail bokep: ${error.message}`);
     }
   }
   
@@ -77,7 +68,7 @@ class Client {
       const response = await axios.get(`${this.hdhentaiBaseURL}/latest?apikey=${this.apiKey}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to get latest releases from IgoDesu: ${error.message}`);
+      throw new Error(`Failed to get latest releases from HdHentai: ${error.message}`);
     }
   }
   
@@ -86,7 +77,7 @@ class Client {
       const response = await axios.get(`${this.hdhentaiBaseURL}/list-series?apikey=${this.apiKey}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to search anime: ${error.message}`);
+      throw new Error(`Failed to get series list from HdHentai: ${error.message}`);
     }
   }
   
@@ -95,7 +86,7 @@ class Client {
       const response = await axios.get(`${this.hdhentaiBaseURL}/detail?apikey=${this.apiKey}&url=${url}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to search anime: ${error.message}`);
+      throw new Error(`Failed to get Detail hentai: ${error.message}`);
     }
   }
   
@@ -104,7 +95,7 @@ class Client {
       const response = await axios.get(`${this.hdhentaiBaseURL}/series/detail?apikey=${this.apiKey}&url=${url}`);
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to search anime: ${error.message}`);
+      throw new Error(`Failed to get detail series hentai: ${error.message}`);
     }
   }
 }
