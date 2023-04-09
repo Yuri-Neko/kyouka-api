@@ -7,7 +7,7 @@ class Client {
     this.igoDesuBaseURL = 'https://web.api-kyouka.my.id/api/nsfw/igodesu';
   }
 
-  async otakusearch(query, result = 10) {
+  async otakusearch(query) {
     try {
       const response = await axios.get(`${this.otakuDesuBaseURL}/search?apikey=${this.apiKey}&query=${query}&result=${result}`);
       return response.data;
@@ -50,6 +50,24 @@ class Client {
       return response.data;
     } catch (error) {
       throw new Error(`Failed to get latest releases from IgoDesu: ${error.message}`);
+    }
+  }
+  
+  async igodesusearch(query) {
+    try {
+      const response = await axios.get(`${this.igoDesuBaseURL}/search?apikey=${this.apiKey}&query=${query}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to search anime: ${error.message}`);
+    }
+  }
+  
+  async igodesudetail(url) {
+    try {
+      const response = await axios.get(`${this.igoDesuBaseURL}/detail?apikey=${this.apiKey}&url=${url}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to search anime: ${error.message}`);
     }
   }
 }
