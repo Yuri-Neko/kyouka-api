@@ -22,6 +22,16 @@ class OtakudesuAPI {
       throw new Error(`Failed to search anime: ${error.message}`);
     }
   }
+  async otakudownload(url) {
+    try {
+      const episodeUrl = url.replace('https://otakudesu.lol/episode/', '');
+      const response = await axios.get(`${this.baseURL}/downloadv2?apikey=${this.apiKey}&id=${episodeUrl}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to get episode download URL: ${error.message}`);
+    }
+  }
+}
   async otakulatest() {
     try {
       const response = await axios.get(`${this.baseURL}/latest?apikey=${this.apiKey}`);
@@ -31,6 +41,7 @@ class OtakudesuAPI {
     }
   }
 }
+
 
 
 module.exports = OtakudesuAPI;
