@@ -1,9 +1,31 @@
 {
   "name": "@kyouka-api",
-  "version": "0.0.1",
-  "description": "Node.js client for https://web.api-kyouka.my.id/",
+  "version": "1.0.0",
+  "description": "Ngetes Node.js client for https://web.api-kyouka.my.id/",
   "main": "index.js",
-  "dependencies": {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuri-Neko/kyouka-api.git"
+  },
+  "keywords": [
+    "hentai",
+    "igodesu",
+    "anime-api",
+    "otakudesu-api",
+    "hentai-api",
+    "hdhentai",
+    "hdhentai-api"
+  ],
+  "author": "KyoukaHashiba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yuri-Neko/kyouka-api/issues"
+  },
+  "homepage": "https://github.com/Yuri-Neko/kyouka-apio#readme",
+   "dependencies": {
     "axios": "^0.21.1"
   }
 }
