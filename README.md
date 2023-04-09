@@ -7,14 +7,14 @@
   - [x] latest
   - [x] search
   - [x] detail
-- [+] Otakudesu
-  - [+] latest
-  - [+] search
+- [x] Otakudesu
+  - [x] latest
+  - [x] search
   - [x] detail
-- [ ] hdhentai
+- [x] hdhentai
   - [x] search
   - [x] latest
-  = [x] detail
+  - [x] detail
 
 </details>
 
