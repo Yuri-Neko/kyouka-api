@@ -6,16 +6,23 @@ class OtakudesuAPI {
     this.baseURL = 'https://web.api-kyouka.my.id/api/anime/otakudesu';
   }
 
-  async searchAnime(query, result) {
+  async otakusearch(query) {
     try {
-      const response = await axios.get(`${this.baseURL}/search?apikey=${this.apiKey}&query=${query}&result=${result}`);
+      const response = await axios.get(`${this.baseURL}/detail?apikey=${this.apiKey}&query=${query}`);
       return response.data;
     } catch (error) {
       throw new Error(`Failed to search anime: ${error.message}`);
     }
   }
-
-  async getLatestAnime() {
+  async otakudetail(url) {
+    try {
+      const response = await axios.get(`${this.baseURL}/detail?apikey=${this.apiKey}&url=${url}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to search anime: ${error.message}`);
+    }
+  }
+  async otakulatest() {
     try {
       const response = await axios.get(`${this.baseURL}/latest?apikey=${this.apiKey}`);
       return response.data;
@@ -24,5 +31,6 @@ class OtakudesuAPI {
     }
   }
 }
+
 
 module.exports = OtakudesuAPI;
