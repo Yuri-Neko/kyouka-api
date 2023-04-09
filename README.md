@@ -1,10 +1,10 @@
 npm i github:Yuri-Neko/kyouka-api
-
+[ REGISTER  https://web.api-kyouka.my.id/ ]
 
 
 const OtakudesuAPI = require('@kyouka-api');
 
-const apiKey = 'YOUR_API_KEY';  [ REGISTER  https://web.api-kyouka.my.id/ ]
+const apiKey = 'YOUR_API_KEY'; 
 const api = new OtakudesuAPI(apiKey);
 
 const query = 'One Piece';
