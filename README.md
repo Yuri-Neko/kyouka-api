@@ -47,19 +47,28 @@ npm install github:Yuri-Neko/kyouka-api
 
 Package name changed to `@kyouka-api`
 
-## Example use
-
-
-### Anime/comic.
-
-#### Otakudesu.
-
+## Example use CJS
 ```js
 const OtakudesuAPI = require('@kyouka-api');
 
 const apiKey = 'YOUR_API_KEY';
 const api = new OtakudesuAPI(apiKey);
 
+```
+## Example use ESM
+```js
+import { OtakudesuAPI } from '@kyouka-api';
+
+const apiKey = 'YOUR_API_KEY';
+const api = new OtakudesuAPI(apiKey);
+
+```
+
+### Anime/comic.
+
+#### Otakudesu.
+
+```js
 const query = 'One Piece';
 
 api.otakusearch(query)
@@ -88,6 +97,8 @@ api.otakulatest()
   });
 
 ```
+
+
 
 ### Nsfw
 
