@@ -61,13 +61,8 @@ const apiKey = 'YOUR_API_KEY';
 const api = new OtakudesuAPI(apiKey);
 
 const query = 'One Piece';
-const result = 5;
 
-api.searchAnime(query, result)
-  .then((data) => {
-    console.log(data);
-    return api.getLatestAnime();
-  })
+api.otakusearch(query)
   .then((data) => {
     console.log(data);
   })
@@ -75,7 +70,16 @@ api.searchAnime(query, result)
     console.error(error);
   });
 
-api.getLatest()
+api.otakudetail(url)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+api.otakulatest()
   .then((data) => {
     console.log(data);
   })
