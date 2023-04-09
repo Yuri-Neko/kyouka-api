@@ -1,5 +1,5 @@
 {
-  "name": "@kyouka-api",
+  "name": "kyouka-api",
   "version": "1.0.0",
   "description": "Ngetes Node.js client for https://web.api-kyouka.my.id/",
   "main": "index.js",
