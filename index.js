@@ -5,6 +5,7 @@ class Client {
     this.apiKey = apiKey;
     this.otakuDesuBaseURL = 'https://web.api-kyouka.my.id/api/anime/otakudesu';
     this.igoDesuBaseURL = 'https://web.api-kyouka.my.id/api/nsfw/igodesu';
+    this.hdhentaiBaseURL = 'https://web.api-kyouka.my.id/api/nsfw/hdhentai';
   }
 
   async otakusearch(query) {
@@ -70,6 +71,43 @@ class Client {
       throw new Error(`Failed to search anime: ${error.message}`);
     }
   }
+  
+  async hdhentailatest() {
+    try {
+      const response = await axios.get(`${this.hdhentaiBaseURL}/latest?apikey=${this.apiKey}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to get latest releases from IgoDesu: ${error.message}`);
+    }
+  }
+  
+  async hdhentaiseries() {
+    try {
+      const response = await axios.get(`${this.hdhentaiBaseURL}/list-series?apikey=${this.apiKey}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to search anime: ${error.message}`);
+    }
+  }
+  
+  async hdhentaidetail(url) {
+    try {
+      const response = await axios.get(`${this.hdhentaiBaseURL}/detail?apikey=${this.apiKey}&url=${url}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to search anime: ${error.message}`);
+    }
+  }
+  
+  async hdhentaiseriesdetail(url) {
+    try {
+      const response = await axios.get(`${this.hdhentaiBaseURL}/series/detail?apikey=${this.apiKey}&url=${url}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Failed to search anime: ${error.message}`);
+    }
+  }
 }
+
 
 module.exports = Client;
