@@ -3,28 +3,28 @@
 <details>
   <summary>Anime/comic</summary>
   
-- [x] Doujindesu
-  - [x] latest
-  - [x] search
-  - [x] detail
+- [ ] Doujindesu
+  - [ ] latest
+  - [ ] search
+  - [ ] detail
 - [x] Otakudesu
   - [x] latest
   - [x] search
   - [x] detail
-- [x] hdhentai
-  - [x] search
-  - [x] latest
-  - [x] detail
+- [ ] hdhentai
+  - [ ] search
+  - [ ] latest
+  - [ ] detail
 
 </details>
 
 <details>
   <summary> Nsfw</summary>
 
-- [x] Bokepsin
-  - [x] latest
-  - [x] search
-  - [x] detail
+- [ ] Bokepsin
+  - [ ] latest
+  - [ ] search
+  - [ ] detail
 - [x] Igodesu
   - [x] latest
   - [x] search
@@ -112,10 +112,36 @@ api.otakulatest()
 
 ### Nsfw
 
-#### Bokepsin
+#### Igodesu
 
 ```js
-comming soon
+const query = 'Colmek'
+const url = 'https://igodesu.com/111488/jembut-memek-mulus-pink-mamah-muda-chindo-dulu-viral.html'
+      
+      
+api.igodesusearch(query)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+api.igodesudetail(url)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+api.igodesulatest()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 ### Note.
