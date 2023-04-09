@@ -51,7 +51,7 @@ Package name changed to `@kyouka-api`
 
 ## Example use CJS
 ```js
-const OtakudesuAPI = require('@kyouka-api');
+const Client = require('@kyouka-api');
 
 const apiKey = 'YOUR_API_KEY';
 const api = new Client(apiKey);
@@ -59,7 +59,7 @@ const api = new Client(apiKey);
 ```
 ## Example use ESM
 ```js
-import { OtakudesuAPI } from '@kyouka-api';
+import { Client } from '@kyouka-api';
 
 const apiKey = 'YOUR_API_KEY';
 const api = new Client(apiKey);
